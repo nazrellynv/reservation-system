@@ -1,0 +1,581 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(243, 243, 243);
+}
+body .navbar {
+  width: 20%;
+  background-color: rgb(44, 44, 44);
+  height: 100%;
+  padding: 20px;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+body .navbar ul {
+  padding: 0;
+  margin: 0;
+}
+body .navbar ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  padding: 25px;
+  gap: 2px;
+}
+body .navbar ul li .current-section {
+  color: rgba(54, 255, 74, 0.836) !important;
+}
+body .navbar ul li .nav {
+  color: white;
+  cursor: not-allowed;
+}
+body .navbar ul li .link {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(54, 255, 74, 0.836);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body main::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 85%;
+  height: 1px;
+  background-color: rgb(196, 193, 193);
+  display: block;
+  top: 10%;
+  left: 23%;
+}
+body main::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(201, 198, 198);
+  display: block;
+  bottom: 15%;
+  left: 0;
+  text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+body .title {
+  font-size: 24px;
+  color: rgb(12, 12, 12);
+  display: inline-block;
+  margin-left: 25%;
+  margin-bottom: 2%;
+}
+body .container {
+  margin-left: 30%;
+  width: 50%;
+  height: 90px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 15px;
+  margin-bottom: 3%;
+  gap: 40px;
+}
+body .container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 20%;
+}
+
+.next-button {
+  position: absolute;
+  background-color: rgb(123, 51, 255);
+  margin-left: 90%;
+  width: 90px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  margin-top: 12%;
+}
+.next-button a {
+  color: white;
+}
+
+.popupstf {
+  width: 170px;
+  height: 60px;
+  background-color: rgb(233, 167, 44);
+  color: white;
+  border-radius: 6px;
+  opacity: 0;
+  margin-bottom: 20%;
+}
+.popupstf .popup-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2%;
+}
+.popupstf span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.fa-check {
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(123, 51, 255);
+}
+
+.containerService {
+  margin-left: 30%;
+  width: 50%;
+  height: 90px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 3%;
+}
+.containerService .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(22, 223, 42, 0.836);
+  font-weight: 600;
+  font-size: 24px;
+}
+.containerService .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 40px;
+}
+.containerService .profile img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 20%;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -5%;
+  margin-left: 23%;
+  width: 70%;
+}
+.buttons .popup {
+  width: 170px;
+  height: 60px;
+  background-color: rgb(233, 167, 44);
+  color: white;
+  border-radius: 6px;
+  opacity: 0;
+  margin-top: 20%;
+}
+.buttons .popup .popup-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2%;
+}
+.buttons .popup span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.buttons .back-button {
+  background-color: rgb(150, 149, 149);
+  width: 90px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+.buttons .back-button a {
+  color: white;
+}
+.buttons .nextSrc-button {
+  background-color: rgb(123, 51, 255);
+  width: 90px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+.buttons .nextSrc-button a {
+  color: white;
+}
+
+.form-container {
+  margin-left: 25%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  margin-bottom: 3%;
+}
+.form-container .form-container::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 85%;
+  height: 1px;
+  background-color: rgb(138, 137, 137);
+  display: block;
+  top: 10%;
+  left: 21%;
+}
+.form-container .form-coupler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 24px;
+}
+.form-container .form-components {
+  color: #707070;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  display: block;
+  margin-bottom: 12px;
+}
+.form-container .inputs {
+  width: 400px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #DADADA;
+  background: #FFF;
+  padding: 10px;
+}
+.form-container .little-red-star {
+  width: 9px;
+  height: 24px;
+  color: var(--Main-Color, #D70101);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin-top: -3px;
+}
+.form-container textarea {
+  width: 850px;
+  height: 180px;
+  border-radius: 4px;
+  border: 1px solid #DADADA;
+  background: #FFF;
+  padding: 10px;
+}
+
+.confirm-btn {
+  background-color: rgb(123, 51, 255);
+  width: 150px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+.confirm-btn a {
+  color: white;
+}
+
+.date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 100px;
+  margin-left: 20%;
+}
+.date-container .date-picker {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.date-container .date-picker .dates {
+  width: 100%;
+  max-width: 320px;
+  height: 60px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+.date-container .date-picker .dates .arrows {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.date-container .date-picker .dates .selected-date {
+  color: #313131;
+  font-size: 27px;
+}
+.date-container .date-picker .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+}
+.date-container .date-picker .days .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(243, 243, 243);
+  padding: 8px;
+  color: rgb(131, 145, 145);
+}
+.date-container .date-picker .days .day.selected {
+  color: black;
+  font-weight: 600;
+  background-color: rgb(253, 246, 237);
+}
+.date-container .week-days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+}
+.date-container .week-days .week-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(216, 215, 215);
+}
+.date-container .date {
+  color: rgb(33, 33, 216);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  margin-top: 8%;
+}
+.date-container .times {
+  display: block;
+}
+.date-container .dates::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(196, 193, 193);
+  top: 36%;
+}
+.date-container .times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 7%;
+}
+.date-container .times .time {
+  background-color: rgb(228, 227, 227);
+  padding: 12px;
+  border-radius: 4px;
+}

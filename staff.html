@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <p class="nav link ">1</p>
+                <p class="nav current-section">Staff</p> 
+            </li>
+            <li>
+                <p class="nav link">2</p>
+                <p class="nav">Service</p>
+               
+            </li>
+            <li>
+                <p class="nav link">3</p>
+                <p class="nav">Date& Time</p>
+            </li>
+            <li>
+                <p class="nav link">4</p>
+                <p class="nav">Confirmation</p>
+            </li> 
+        </ul>
+    </nav>
+    <main>
+        <p class="title">Select Staff</p>
+        <div class="container" id="staff1">
+            <div>
+                <img src="images/staff1.png">
+            </div>
+            <div>
+                <p>Alex Rosetta</p>
+                <p style="color: rgb(177, 174, 174);">alexyrosetta@egmail.com</p>
+            </div>
+        </div>
+        <div class="container" id="staff2">
+            <div>
+                <img src="images/staff2.png">
+            </div>
+            <div>
+                <p>Maria July</p>
+                <p style="color: rgb(177, 174, 174);">mariajuly@egmail.com</p>
+            </div> 
+        </div>
+    </main> 
+    <div class="next-button">
+        <a  href="#">NEXT</a>
+    </div>
+    
+    <input type="radio" value="staff1" class="staff-input" hidden>
+    <input type="radio" value="staff2" class="staff-input" hidden>
+    <a class="next" href="service.html"></a>
+    <div id="popupstf" >
+        <div class="popup-content">
+          <span>&#9432</span><p>Select Staff</p>
+        </div>
+    </div>
+  <script src="js/staff.js"></script>  
+</body>
+</html>

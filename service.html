@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <div class="check"><i class="fa fa-check"></i></div>
+                <p class="nav ">Staff</p> 
+            </li>
+            <li>
+                <p class="nav link">2</p>
+                <p class="nav current-section">Service</p>
+               
+            </li>
+            <li>
+                <p class="nav link">3</p>
+                <p class="nav">Date& Time</p>
+            </li>
+            <li>
+                <p class="nav link">4</p>
+                <p class="nav">Confirmation</p>
+            </li> 
+        </ul>
+       
+    </nav>
+    <main>
+        <p class="title">Select service</p>
+        <div class="containerService" id="service1">
+            <div class="profile">
+                <div>
+                    <img src="images/service2.png">
+                </div>
+                <div>
+                    <p>Oral hygiene</p>
+                    <p style="color: rgb(177, 174, 174);">1hour</p>
+                </div>
+            </div>
+            <div class="price">
+                50$
+            </div>   
+        </div>
+        <div class="containerService" id="service2">
+            <div class="profile">
+                <div>
+                    <img src="images/service1.png">
+                </div>
+                <div>
+                    <p>Implants</p>
+                    <p style="color: rgb(177, 174, 174);">1 hour 12 minutes</p>
+                </div> 
+            </div>
+            <div class="price">
+                120$
+            </div>
+        </div>
+        <div class="containerService" id="service3">
+            <div class="profile">
+                <div>
+                    <img src="images/service3.png">
+                </div>
+                <div>
+                    <p>Check up</p>
+                    <p style="color: rgb(177, 174, 174);">1 hour 30 minutes</p>
+                </div>
+            </div>
+            <div class="price">
+                140$
+            </div>     
+        </div>
+    </main>
+    <buttons class="buttons">
+        <div class="back-button">
+            <a  href="#">BACK</a>
+        </div>
+        <div class="popup">
+            <div class="popup-content">
+              <span>&#9432</span><p>Select Staff</p>
+            </div>
+        </div>
+    <input type="text" id="ok">
+
+        <div class="nextSrc-button">
+            <a href="#">NEXT</a>
+        </div>
+    </buttons>
+    <input type="radio" value="service1" class="service-input" hidden>
+    <input type="radio" value="service2" class="service-input" hidden>
+    <input type="radio" value="service3" class="service-input" hidden>
+    <a class="next" href="dateTime.html"></a>
+    <a class="back" href="staff.html"></a>
+    <script src="js/service.js"></script>   
+    <script src="./js/form.js"></script>
+</body>
+</html>

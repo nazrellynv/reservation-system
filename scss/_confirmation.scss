@@ -1,0 +1,80 @@
+.form-container {
+    margin-left: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 3%;
+    .form-container::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 85%;
+      height: 1px;
+      background-color: rgb(138, 137, 137);
+      display: block;
+      top: 10%;
+      left: 21%;
+
+    }
+    .form-coupler {
+      display: flex; 
+      flex-direction: row; 
+      gap: 24px;
+      
+    }  
+    .form-components {
+      color: #707070;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; 
+      display: block;
+      margin-bottom: 12px;
+        
+    }
+    .inputs {
+      width: 400px;
+      height: 30px;
+      border-radius: 4px;
+      border: 1px solid #DADADA;
+      background: #FFF;
+      padding: 10px;  
+  
+    }
+    .little-red-star {
+      width: 9px;
+      height: 24px;
+      color: var(--Main-Color, #D70101);
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      margin-top: -3px;
+    }
+    textarea {
+      width: 850px;
+      height: 180px;
+      border-radius: 4px;
+      border: 1px solid #DADADA;
+      background: #FFF;
+      padding: 10px;
+    }                                                                                            
+  
+  }
+
+  .confirm-btn {
+    background-color: rgb(123, 51, 255);
+        width: 150px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        justify-content: center;
+        padding: 5px;
+        a {
+        color: white;
+        }
+        
+      }
