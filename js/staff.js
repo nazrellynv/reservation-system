@@ -34,7 +34,10 @@ staff.forEach(d => {
         inputs.forEach(i => {
             if(d.id === i.value) {
               i.checked="true";
-              localStorage.setItem('staffId', d.id);
+
+              let selectedStaff = document.getElementById(d.id).lastElementChild.firstElementChild.innerHTML
+              
+              localStorage.setItem('staffId', selectedStaff);
               d.style.border=" solid 2px rgba(54, 255, 74, 0.836)"
             }
         })

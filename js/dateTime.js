@@ -83,18 +83,39 @@ function populateDates (e) {
             dateElement.textContent=formatDate(selectedDate);
             dateElement.dataset.value= selectedDate;
             populateDates()
-            populateTimes()
   
         })
         days.appendChild(day_element);
     
     }
 }
+populateTimes()
+ 
+nextBtn.addEventListener("click", function() {
+    if(Array.from(inputs).some(i =>i.checked)) {
+        nextLink.click();
 
-function populateTimes(e) {
+    }
+    else {
+        popup.style.opacity= "1";
+    }
+})
+
+// CreateTimeInput()
+// function CreateTimeInput(){
+//     container.forEach(c => {
+//         let timeInput = document.createElement('input')
+//             timeInput.type = 'radio'
+//             timeInput.name = 'time-input'
+//             timeInput.className = 'time-input'
+//             timeInput.value = c.textContent
+//             c.appendChild(timeInput)
+//     })
+// }
+
+function populateTimes() {
     times.innerHTML='';
     for (let i=0; i<appTimes.length; i++) {
-
         const time_element= document.createElement('div');
         time_element.classList.add("time");
         
@@ -106,34 +127,48 @@ function populateTimes(e) {
         }
         times.appendChild(time_element);
     } 
+    let container=document.querySelectorAll('.time');
+    container.forEach (d => {
+        d.addEventListener("click", () => {
+            container.forEach(c => {
+                c.id=c.textContent;
+                c.style.backgroundColor="rgb(228, 227, 227)"
+            })
+            inputs.forEach(i => {
+                if(d.id === i.value) {
+                    i.checked=true;
+                    d.style.backgroundColor ='rgb(120, 222, 74)';
+                    localStorage.setItem('dateId', d.id) 
+                }
+            })
+        })
+    })
+    dateId=localStorage.getItem('dateId');
+    function highlightElement(){
+        if(localStorage.length !== 0){
+            inputs.forEach(i => {
+               if(dateId === i.value){
+                i.checked = "true";
+                console.log("true")
+               }
+            })
+            container.forEach(s => {
+                if(dateId === s.id){
+                    s.style.backgroundColor="rgb(120, 222, 74)";
+                }
+            })
+        }
+    }
+    highlightElement();
 }
 
 
-let container=document.querySelectorAll('.time');
-container.forEach (d => {
-    d.addEventListener("click", function() {
-        console.log('ok')
-        d.id=d.textContent;
-        inputs.forEach(i => {
-            if(d.id === i.value) {
-                i.checked=true;
-                console.log('true');
-            }
-            else {
-                console.log('false')
-            }
-        })
-    })
-})
+
+
+
 
 
 backBtn.addEventListener('click', function() {
     back.click();
-
 });
 
-
-nextBtn.addEventListener('click', function() {
-        nextLink.click()
-   
-})
