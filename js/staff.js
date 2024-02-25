@@ -35,9 +35,10 @@ staff.forEach(d => {
             if(d.id === i.value) {
               i.checked="true";
 
-              let selectedStaff = document.getElementById(d.id).lastElementChild.firstElementChild.innerHTML
+              let selectedStaffName = document.getElementById(d.id).lastElementChild.firstElementChild.innerHTML
               
-              localStorage.setItem('staffId', selectedStaff);
+              localStorage.setItem('staffId', d.id);
+              localStorage.setItem('selectedStaffName', selectedStaffName)
               d.style.border=" solid 2px rgba(54, 255, 74, 0.836)"
             }
         })
@@ -53,6 +54,9 @@ nextBtn.addEventListener("click", function() {
     }
     else {
         popup.style.opacity="1";
+        setTimeout(() => {
+            popup.style.opacity="0";
+        },2000)
     }
 })
 

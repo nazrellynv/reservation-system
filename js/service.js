@@ -38,8 +38,17 @@ service.forEach(d => {
         inputs.forEach(i => {
             if(d.id === i.value) {
                 i.checked="true";
+
+                let selectedServiceName = document.getElementById(d.id).firstElementChild.lastElementChild.firstElementChild.innerHTML
+                let selectedServicePrice = document.getElementById(d.id).lastElementChild.innerHTML
+                
+                console.log(selectedServiceName+selectedServicePrice)
+
                 localStorage.setItem("serviceId", d.id);
-                d.style.border = "solid 1px green"
+                localStorage.setItem('selectedServiceName', selectedServiceName)
+                localStorage.setItem("selectedServicePrice", selectedServicePrice)
+                
+                d.style.border = "solid 1px rgba(54, 255, 74, 0.836) "
             }
         })
     })
@@ -51,5 +60,8 @@ nextBtn.addEventListener("click", function ()  {
     } 
     else {
         popup.style.opacity= "1";
+        setTimeout(() => {
+            popup.style.opacity="0";
+        },2000)
     }
 })

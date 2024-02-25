@@ -1,9 +1,10 @@
 let noteArea=document.querySelector("#message");
-let staffIdLS = localStorage.getItem('staffId');
+let selectedStaffName = localStorage.getItem('selectedStaffName');
+let selectedServiceName = localStorage.getItem('selectedServiceName')
+let selectedServicePrice = localStorage.getItem('selectedServicePrice')
+let selectedDate = localStorage.getItem('selectedDate')
 
+noteArea.value = `Staff: ${selectedStaffName};\nService: ${selectedServiceName};\nTotal: ${selectedServicePrice.trim()};\nDate: ${selectedDate}`
 
-console.log(staffIdLS)
-
-// noteArea.value = `Staff: ${selectedStaff}`
-
-// noteArea.value = staffValue;
+   console.log(noteArea.value);
+ 

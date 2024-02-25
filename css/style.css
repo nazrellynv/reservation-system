@@ -124,6 +124,7 @@ body .container img {
   color: white;
   border-radius: 6px;
   opacity: 0;
+  transition: 0.5s;
 }
 .popup .popup-content {
   display: flex;

@@ -28,7 +28,7 @@ confirmBtn.addEventListener("click", function() {
   if (Array.from(inputs).every(i=> i.checked)) {
     popup.style.opacity= "1";
     body.classList.add('transparent');
-    popup.innerTEXT="Confirmation successfully completed!";
+    popup.innerHTML="Confirmation successfully completed!";
     popup.style.color="rgba(54, 255, 74, 0.836)";
 
   }

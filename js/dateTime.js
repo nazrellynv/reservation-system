@@ -98,20 +98,12 @@ nextBtn.addEventListener("click", function() {
     }
     else {
         popup.style.opacity= "1";
+        setTimeout(() => {
+            popup.style.opacity="0";
+        },2000)
     }
 })
 
-// CreateTimeInput()
-// function CreateTimeInput(){
-//     container.forEach(c => {
-//         let timeInput = document.createElement('input')
-//             timeInput.type = 'radio'
-//             timeInput.name = 'time-input'
-//             timeInput.className = 'time-input'
-//             timeInput.value = c.textContent
-//             c.appendChild(timeInput)
-//     })
-// }
 
 function populateTimes() {
     times.innerHTML='';
@@ -129,15 +121,20 @@ function populateTimes() {
     } 
     let container=document.querySelectorAll('.time');
     container.forEach (d => {
+        d.id=d.textContent;
         d.addEventListener("click", () => {
+
+            let date = d.parentElement.previousElementSibling.innerHTML
+            console.log(date)
+
             container.forEach(c => {
-                c.id=c.textContent;
                 c.style.backgroundColor="rgb(228, 227, 227)"
             })
             inputs.forEach(i => {
                 if(d.id === i.value) {
                     i.checked=true;
                     d.style.backgroundColor ='rgb(120, 222, 74)';
+                    localStorage.setItem('selectedDate', date.concat('-', i.value))
                     localStorage.setItem('dateId', d.id) 
                 }
             })
