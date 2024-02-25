@@ -1,12 +1,12 @@
-let services = document.querySelectorAll(".containerService")
-let serviceValue;
+let noteArea=document.querySelector("#message");
+let staff=document.querySelectorAll('.container');
+let staffValue;
 
-services.forEach(s => {
+staff.forEach(s => {
     if(s.id === localStorage.getItem("staffId")){
-        serviceValue = s.firstElementChild.lastElementChild.firstElementChild.innerHTML
+        staffValue = s.lastElementChild.innerHTML;
     }
 })
 
-let input = document.getElementById("ok")
 
-input.value = serviceValue;
+noteArea.value = staffValue;

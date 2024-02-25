@@ -38,16 +38,15 @@
                 <label  class="form-components"  for="fname" >First name </label> 
                 <img class="little-red-star" src="images/Frame 14691.png">
             </div>  
-            <input class="inputs" type="text" id="fname">
+            <input class="inputs" id="form1" type="text" id="fname">
           </div>
           <div>
             <div style="display: flex; gap: 4px;">
                 <label class="form-components"   type="lname" >Last name</label>
                 <img class="little-red-star" src="images/Frame 14691.png">
             </div>
-            <input class="inputs" type="text" id="lname">
+            <input class="inputs" id="form2"  type="text" id="lname">
           </div>
-
         </div>
         <div class="form-coupler">
           <div>
@@ -55,14 +54,14 @@
                 <label class="form-components"   for="email" >Email</label>
                 <img class="little-red-star" src="images/Frame 14691.png">
             </div>
-            <input class="inputs" type="text" id="email">
+            <input class="inputs" id="form3"  type="email" id="email">
           </div>
           <div class="position-input">
             <div style="display: flex; gap: 4px;">
                 <label class="form-components"   for="phone" >Phone</label>
                 <img class="little-red-star" src="images/Frame 14691.png">
             </div>
-            <input class="inputs" type="number" id="phone">
+            <input class="inputs" id="form4"  type="number" id="phone">
           </div>
         </div>
         <div>
@@ -74,15 +73,23 @@
         </div>
   </div>
   </main>
-  <buttons class="buttons">
     <div class="back-button">
         <a  href="#">BACK</a>
     </div>
     <div class="confirm-btn">
         <a  href="#">CONFIRM BOOKING</a>
     </div>
-</buttons>
-   
-    
+    <div class="alert-popup">
+      <div class="popup-content">
+        <span class="close-popup">&#x2715</span><p>Please fill the all required fields!</p>
+      </div>
+    </div>
+    <a class="back" href="dateTime.html"></a>
+    <input type="radio" value="form1" class="form-input" hidden>
+    <input type="radio" value="form2" class="form-input" hidden>
+    <input type="radio" value="form3" class="form-input" hidden>
+    <input type="radio" value="form4" class="form-input" hidden>  
+  <script src="js/confirmation.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

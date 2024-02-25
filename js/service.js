@@ -2,33 +2,32 @@ const backBtn =document.querySelector(".back-button");
 const back=document.querySelector('.back');
 let service=document.querySelectorAll('.containerService');
 let inputs=document.querySelectorAll(".service-input");
-let nextBtn=document.querySelector(".nextSrc-button");
+let nextBtn=document.querySelector(".next-button");
 let next=document.querySelector(".next");
 let popup=document.querySelector(".popup")
-let staffId = localStorage.getItem("staffId");
+let serviceId = localStorage.getItem("serviceId");
 
 backBtn.addEventListener('click', function() {
     back.click();
 } );
 
-function Salam(){
+function highlightElement(){
     if(localStorage.length !== 0){
-        console.log("ok")
         inputs.forEach(i => {
-           if(staffId === i.value){
+           if(serviceId === i.value){
             i.checked = "true"
             console.log(i.checked)
            }
         })
     
         service.forEach(s => {
-            if(staffId === s.id){
-                s.style.border = "solid 1px green"
+            if(serviceId === s.id){
+                s.style.border = "solid 2px rgba(54, 255, 74, 0.836) "
             }
         })
     }
 }
-Salam();
+highlightElement();
 
 service.forEach(d => {
     d.addEventListener('click', () => {
@@ -39,7 +38,7 @@ service.forEach(d => {
         inputs.forEach(i => {
             if(d.id === i.value) {
                 i.checked="true";
-                localStorage.setItem("staffId", d.id);
+                localStorage.setItem("serviceId", d.id);
                 d.style.border = "solid 1px green"
             }
         })

@@ -1,3 +1,16 @@
+.transparent:before{
+  content: "";
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  position: absolute;
+  z-index: 10;
+  
+}
+
+
 .form-container {
     margin-left: 25%;
     width: 100%;
@@ -42,6 +55,9 @@
       padding: 10px;  
   
     }
+    .inputs:focus {
+      outline: 0;
+    }
     .little-red-star {
       width: 9px;
       height: 24px;
@@ -60,21 +76,57 @@
       border: 1px solid #DADADA;
       background: #FFF;
       padding: 10px;
-    }                                                                                            
+    } 
+    textarea:focus {
+      outline: 0;
+    }                                                                                           
   
   }
 
   .confirm-btn {
-    background-color: rgb(123, 51, 255);
         width: 150px;
         height: 40px;
+        position: absolute;
+        background-color: rgb(126, 73, 226);
         display: flex;
         align-items: center;
         border-radius: 4px;
         justify-content: center;
-        padding: 5px;
+        padding: 10px;
+        right: 5%;
+        bottom: 5%;
         a {
         color: white;
+        font-size: 15px;
         }
-        
-      }
+    }
+    .alert-popup {
+      width: 350px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-color: white;
+      color: rgb(245, 168, 27);
+      border-radius: 6px;
+      opacity: 0; 
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+     span{
+        position: absolute;
+        right: 5%;
+        top:5%;
+        font-size: 18px;
+        color: rgb(113, 113, 113)
+     }
+    }
+    
+   
+
+
+
+
